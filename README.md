@@ -42,6 +42,10 @@ When you run `gener8app new [project_name]`, it generates the following project 
     ├── requirements.txt
     └── README.md
 
+### INSTALLATION
+
+`pip install gener8app`
+
 ### COMMAND
 
 `gener8app new [project_name]`
