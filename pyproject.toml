@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "gener8app"
+version = "0.0.0"
+description = "A CLI to generate bare-bone FastAPI project"
+authors = ["kenmoh <kenneth.aremoh@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.scripts]
+gener8app = "gener8app.main:app"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+typer = {extras = ["all"], version = "^0.7.0"}
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.2.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
