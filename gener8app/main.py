@@ -95,7 +95,7 @@ def new(project_name: str = typer.Argument(..., help="The name of the project"))
     rich_print(
         f"[pink]cd into {project_name} and activate {venv}(virtual environment) [/pink]"
     )
-    rich_print("Keep building amazing stuff !!!")
+    rich_print("[bold pink]Keep building amazing things !!![/bold pink]")
 
 
 @app.callback()
