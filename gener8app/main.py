@@ -77,6 +77,7 @@ def new(project_name: str = typer.Argument(..., help="The name of the project"))
     open(f"{project_name}/.gitignore", "a").close()
     open(f"{project_name}/requirements.txt", "a").close()
     open(f"{project_name}/Dockerfile", "a").close()
+    open(f"{project_name}/docker-compose.yaml", "a").close()
 
     # Initialize git
     subprocess.run(["git", "init"], cwd=project_name)
