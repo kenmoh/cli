@@ -19,7 +19,7 @@ def new(project_name: str = typer.Argument(..., help="The name of the project"))
 
     for value in track(
         range(100),
-        description=f"[pink]Creating {project_name.capitalize()} project...[/pink]",
+        description=f":hourglass: [purple3]Creating {project_name.capitalize()} project...[/purple3] :hourglass:",
     ):
         time.sleep(0.01)
         total += 1
@@ -83,7 +83,7 @@ def new(project_name: str = typer.Argument(..., help="The name of the project"))
     subprocess.run(["git", "init"], cwd=project_name)
 
     rich_print(
-        f"[bold green]SUCCESS[/bold green]: {project_name} created :boom: :boom: :boom:"
+        f" :rocket: [bold green]SUCCESS: {project_name} created [/bold green]! :rocket: :rocket:"
     )
 
     # Create virtual environment based on OS
@@ -93,9 +93,11 @@ def new(project_name: str = typer.Argument(..., help="The name of the project"))
         subprocess.run(["python3", "-m", "venv", venv], cwd=project_name)
 
     rich_print(
-        f"[pink]cd into {project_name} and activate {venv}(virtual environment) [/pink]"
+        f"[cyan]cd into {project_name} and activate {venv}(virtual environment) [/cyan]"
     )
-    rich_print("[bold pink]Keep building amazing things !!![/bold pink]")
+    rich_print(
+        "[bold magenta]Keep building amazing things !!![/bold magenta] :sparkles: :sparkles:"
+    )
 
 
 @app.callback()
