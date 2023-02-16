@@ -19,7 +19,7 @@ def new(project_name: str = typer.Argument(..., help="The name of the project"))
 
     for value in track(
         range(100),
-        description=f":hourglass: [purple3]Creating {project_name.capitalize()} project...[/purple3] :hourglass:",
+        description=f":hourglass: :hourglass: [purple3]Creating {project_name.capitalize()} project...[/purple3] ",
     ):
         time.sleep(0.01)
         total += 1
@@ -27,7 +27,9 @@ def new(project_name: str = typer.Argument(..., help="The name of the project"))
     try:
         os.makedirs(project_name)
     except FileExistsError:
-        rich_print(f"[bold red]{project_name} already exists.[/bold red]")
+        rich_print(
+            f":no_entry_sign: :no_entry_sign: [bold red]{project_name} already exists.[/bold red]"
+        )
 
     app_dir = os.path.join(project_name, "app")
     os.makedirs(app_dir)
@@ -83,7 +85,7 @@ def new(project_name: str = typer.Argument(..., help="The name of the project"))
     subprocess.run(["git", "init"], cwd=project_name)
 
     rich_print(
-        f" :rocket: [bold green]SUCCESS: {project_name} created [/bold green]! :rocket: :rocket:"
+        f":rocket: :rocket: [bold green]SUCCESS: {project_name} created :100: [/bold green] :white_check_mark:"
     )
 
     # Create virtual environment based on OS
@@ -96,7 +98,7 @@ def new(project_name: str = typer.Argument(..., help="The name of the project"))
         f"[cyan]cd into {project_name} and activate {venv}(virtual environment) [/cyan]"
     )
     rich_print(
-        "[bold magenta]Keep building amazing things !!![/bold magenta] :sparkles: :sparkles:"
+        ":sparkles: :sparkles: [bold magenta]Keep building amazing things !!![/bold magenta] "
     )
 
 
@@ -107,5 +109,5 @@ def callback():
     """
 
 
-# if __name__ == "__main__":
-#     app()
+if __name__ == "__main__":
+    app()
