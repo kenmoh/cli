@@ -28,7 +28,7 @@ def new(project_name: str = typer.Argument(..., help="The name of the project"))
         os.makedirs(project_name)
     except FileExistsError:
         rich_print(
-            f":no_entry_sign: :no_entry_sign: [bold red]{project_name} already exists.[/bold red]"
+            f":no_entry_sign: :no_entry_sign: [bold red] {project_name} already exists.[/bold red]"
         )
 
     app_dir = os.path.join(project_name, "app")

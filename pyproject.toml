@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "gener8app"
-version = "0.0.1"
+version = "1.0"
 description = "A CLI to generate bare-bone FastAPI project"
 authors = ["kenmoh <kenneth.aremoh@gmail.com>"]
 readme = "README.md"
